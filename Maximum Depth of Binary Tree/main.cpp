@@ -1,4 +1,3 @@
-.
 #include <iostream>
 using namespace std ;
 
@@ -8,10 +7,10 @@ public:
         return recMaxDepth(root);
     }
     int recMaxDepth (TreeNode* root){
-        if (root ==  nullptr){
+        if (root == NULL){
             return 0;
         }
-
+       
         return 1 +getMax(recMaxDepth(root->left) , recMaxDepth(root->right)); ;
     }
     int getMax(int a, int b){
